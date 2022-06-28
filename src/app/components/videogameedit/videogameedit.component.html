@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <a routerLink="/videogamecreate" routerLinkActive="active" class="navbar-brand ">Add New Videogame</a>
+    <a routerLink="/videogamelist" routerLinkActive="active" class="navbar-brand">Videogame Catalog</a>
+  </nav>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Upsert Videogames</h1>
+      <p class="lead">This page is used to insert/update video games</p>
+    </div>
+</div>
+<table class="table table-sm">
+<tbody *ngIf="videogame">
+    <tr>
+        <td>Id</td>
+        <td><input [(ngModel)]="videogame.id"></td>
+    </tr>
+    <tr>
+        <td>Videogame Name</td>
+        <td><input [(ngModel)]="videogame.name" ></td>
+    </tr>
+    <tr>
+        <td>Platform</td>
+        <td><input [(ngModel)]="videogame.platform"></td>
+    </tr>
+    <tr>
+        <td>Genre</td>
+        <td><input [(ngModel)]="videogame.genere" ></td>
+    </tr>
+    <tr>
+        <td>Company Name</td>
+        <td><input [(ngModel)]="videogame.company"></td>
+    </tr>
+</tbody>
+</table>
+<div>
+    <button (click)="submitForm()" class="btn btn-primary btn-sm">Save</button>
+</div>
